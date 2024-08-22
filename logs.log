@@ -1,0 +1,64 @@
+2024-08-21 15:45:21,062:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-08-21 15:45:21,062:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-08-21 15:45:21,062:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-08-21 15:45:21,062:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-08-21 15:45:28,488:INFO:Initializing load_model()
+2024-08-21 15:45:28,488:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 15:51:14,073:INFO:Initializing load_model()
+2024-08-21 15:51:14,073:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 15:51:57,297:INFO:Initializing load_model()
+2024-08-21 15:51:57,305:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 15:51:57,467:INFO:Initializing predict_model()
+2024-08-21 15:51:57,467:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000016B9799BED0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(include=['fintech', 'web3', 'ecommerce',
+                                             'consumer_others', 'edtech ',
+                                             'esg', 'enterprise_saas',
+                                             'others ', 'glassdoor_rating',
+                                             'sucessranking_four_gdranking',
+                                             'glassdoor_recommend_percentage',
+                                             'simila...
+                                    transformer=OneHotEncoder(cols=['business_model',
+                                                                    'glassdoor_total_employees',
+                                                                    'country'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('feature_selection',
+                 TransformerWrapper(exclude=[], transformer=SelectKBest(k=15))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=483))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000016B95564A40>)
+2024-08-21 15:51:57,467:INFO:Checking exceptions
+2024-08-21 15:51:57,467:INFO:Preloading libraries
+2024-08-21 15:51:57,467:INFO:Set up data.
+2024-08-21 15:51:57,500:INFO:Set up index.
+2024-08-21 15:51:57,751:WARNING:C:\Users\makal\Desktop\GA Folder\alice_capstone_unicorn\streamlit\app.py:121: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(prediction['prediction_label']) == 1:
+
+2024-08-21 15:59:36,499:INFO:Initializing load_model()
+2024-08-21 15:59:36,499:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:00:21,320:INFO:Initializing load_model()
+2024-08-21 16:00:21,320:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:01:26,549:INFO:Initializing load_model()
+2024-08-21 16:01:26,549:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:04:09,662:INFO:Initializing load_model()
+2024-08-21 16:04:09,662:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:05:13,239:INFO:Initializing load_model()
+2024-08-21 16:05:13,247:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:05:16,558:INFO:Initializing load_model()
+2024-08-21 16:05:16,558:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:05:21,169:INFO:Initializing load_model()
+2024-08-21 16:05:21,169:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:28:45,105:INFO:Initializing load_model()
+2024-08-21 16:28:45,113:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:28:52,472:INFO:Initializing load_model()
+2024-08-21 16:28:52,472:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
+2024-08-21 16:36:50,274:INFO:Initializing load_model()
+2024-08-21 16:36:50,274:INFO:load_model(model_name=model, platform=None, authentication=None, verbose=True)
