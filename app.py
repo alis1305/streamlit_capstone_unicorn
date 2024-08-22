@@ -7,179 +7,30 @@ model = load_model('model')
 
 # Define the Streamlit app
 def main():
-    st.title("Startup Success Prediction")
+    st.title("Company Success Prediction")
 
     # User input for each feature
     #company = st.text_input("Company Name")
-    industry = st.selectbox("Industry",("Fintech", "Web3", "E-commerce", "Consumer Others","EdTech","ESG","Enterprise SaaS","Others"))
-    if industry == "Fintech":
-        fintech = 1
-        web3 = 0
-        ecommerce = 0
-        consumer_others = 0
-        edtech = 0
-        esg = 0
-        enterprise_saas = 0
-        others = 0
-    if industry == "web3":
-        fintech = 0
-        web3 = 1
-        ecommerce = 0
-        consumer_others = 0
-        edtech = 0
-        esg = 0
-        enterprise_saas = 0
-        others = 0
-    if industry == "ecommerce":
-        fintech = 0
-        web3 = 0
-        ecommerce = 1
-        consumer_others = 0
-        edtech = 0
-        esg = 0
-        enterprise_saas = 0
-        others = 0
-    if industry == "consumer_others":
-        fintech = 0
-        web3 = 0
-        ecommerce = 0
-        consumer_others = 1
-        edtech = 0
-        esg = 0
-        enterprise_saas = 0
-        others = 0
-    if industry == "edtech":
-        fintech = 0
-        web3 = 0
-        ecommerce = 0
-        consumer_others = 0
-        edtech = 1
-        esg = 0
-        enterprise_saas = 0
-        others = 0
-    if industry == "esg":
-        fintech = 0
-        web3 = 0
-        ecommerce = 0
-        consumer_others = 0
-        edtech = 0
-        esg = 1
-        enterprise_saas = 0
-        others = 0
-    if industry == "enterprise_saas":
-        fintech = 0
-        web3 = 0
-        ecommerce = 0
-        consumer_others = 0
-        edtech = 0
-        esg = 0
-        enterprise_saas = 1
-        others = 0
-    if industry == "others":
-        fintech = 0
-        web3 = 0
-        ecommerce = 0
-        consumer_others = 0
-        edtech = 0
-        esg = 0
-        enterprise_saas = 0
-        others = 1
-        
-#business_model = st.text_input("Business Model")
-    business_model = st.selectbox("Business Model",("B2B","B2C","B2B2C","Others"))
-    if business_model == "B2B":
-        B2B = 1
-        B2C = 0
-        B2B2C = 0
-        Others = 0
-    if business_model == "B2C":
-        B2B = 0
-        B2C = 1
-        B2B2C = 0
-        Others = 0
-    if business_model == "B2B2C":
-        B2B = 0
-        B2C = 0
-        B2B2C = 1
-        Others = 0
-    if business_model == "B2B2C":
-        B2B = 0
-        B2C = 0
-        B2B2C = 0
-        Others = 1
-         
-    
+    fintech = st.selectbox("Fintech", [0, 1])
+    web3 = st.selectbox("Web3", [0, 1])
+    ecommerce = st.selectbox("E-commerce", [0, 1])
+    consumer_others = st.selectbox("Consumer Others", [0, 1])
+    edtech = st.selectbox("EdTech", [0, 1])
+    esg = st.selectbox("ESG", [0, 1])
+    enterprise_saas = st.selectbox("Enterprise SaaS", [0, 1])
+    others = st.selectbox("Others", [0, 1])
+    business_model = st.text_input("Business Model")
     glassdoor_rating = st.slider("Glassdoor Rating", 0.0, 5.0, 3.5)
-    sucessranking_four_gdranking = 0
-    
-    #glassdoor_total_employees = st.number_input("Total Employees", min_value=0, step=1) # to change drop down list of values 
-    glassdoor_total_employees = st.selectbox("Number of Employees",("1 to 50", "51 to 200","201 to 500","501 to 1000","1001 to 5000","5001 to 10000","10000+"))
-   #question to kishan: how to I add new field to streamlit. number of employees start at 51. syntax error when I added "1 to 50
-    if glassdoor_total_employee == "1 to 50": 
-        1 to 50 = 1
-        51 to 200 = 0
-        201 to 500 = 0
-        501 to 1000 = 0
-        1001 to 5000 = 0
-        5001 to 10000 = 0
-        10000+ = 0     
-    if glassdoor_total_employee == "51 to 200":
-        1 to 50 = 0
-        51 to 200 = 1
-        201 to 500 = 0
-        501 to 1000 = 0
-        1001 to 5000 = 0
-        5001 to 10000 = 0
-        10000+ = 0   
-    if glassdoor_total_employee == "201 to 500":
-        1 to 50 = 0
-        51 to 200 = 0
-        201 to 500 = 1
-        501 to 1000 = 0
-        1001 to 5000 = 0
-        5001 to 10000 = 0
-        10000+ = 0
-    if glassdoor_total_employee == "501 to 1000":
-        1 to 50 = 0
-        51 to 200 = 0
-        201 to 500 = 0
-        501 to 1000 = 1
-        1001 to 5000 = 0
-        5001 to 10000 = 0
-        10000+ = 0
-    if glassdoor_total_employee == "1001 to 5000":
-        1 to 50 = 0
-        51 to 200 = 0
-        201 to 500 = 0
-        501 to 1000 = 0
-        1001 to 5000 = 1
-        5001 to 10000 = 0
-        10000+ = 0
-    if glassdoor_total_employee == "5001 to 10000":
-        1 to 50 = 0
-        51 to 200 = 0
-        201 to 500 = 0
-        501 to 1000 = 0
-        1001 to 5000 = 0
-        5001 to 10000 = 1
-        10000+ = 0
-    if glassdoor_total_employee == "10000+":
-        1 to 50 = 0
-        51 to 200 = 0
-        201 to 500 = 0
-        501 to 1000 = 0
-        1001 to 5000 = 0
-        5001 to 10000 = 0
-        10000+ = 1
-    
-    sucessranking_three_employees = 0
+    sucessranking_four_gdranking = st.slider("Success Ranking Four (GD Ranking)", 0, 10, 5)
+    glassdoor_total_employees = st.number_input("Glassdoor Total Employees", min_value=0, step=1)
+    sucessranking_three_employees = st.slider("Success Ranking Three (Employees)", 0, 10, 5)
     glassdoor_recommend_percentage = st.slider("Glassdoor Recommend Percentage", 0, 100, 50)
-    valauation_divide_vdminusyf = 0
-    sucessranking_two_valdivideyear = 0
+    valauation_divide_vdminusyf = st.number_input("Valuation Divide VD minus YF", min_value=0.0)
+    sucessranking_two_valdivideyear = st.slider("Success Ranking Two (Val Divide Year)", 0, 10, 5)
     similar_businessmodel_overseas = st.selectbox("Similar Business Model Overseas", [0, 1])
-    year_operating = 0
-    years_to_unicorn = 0
-    exit = 0
+    year_operating = st.number_input("Year Operating", min_value=0)
+    years_to_unicorn = st.number_input("Years to Unicorn", min_value=0)
+    exit = st.selectbox("Exit", [0, 1])
     country = st.text_input("Country")
     patent = st.selectbox("Patent", [0, 1])
     pivot = st.selectbox("Pivot", [0, 1])
@@ -188,11 +39,6 @@ def main():
     tech_founder = st.selectbox("Tech Founder", [0, 1])
     foundersage_when_started = st.number_input("Founder's Age When Started", min_value=0)
     graduated_overseas_uni = st.selectbox("Graduated Overseas University", [0, 1])
-    # india_uni = 0
-    # if india_uni in "name of multi select box":
-        #india_uni = 1
-        #repeat this for the other uni 
-    
     sg_uni = st.selectbox("SG University", [0, 1])
     india_uni = st.selectbox("India University", [0, 1])
     us_uk_uni = st.selectbox("US/UK University", [0, 1])
